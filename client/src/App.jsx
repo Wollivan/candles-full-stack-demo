@@ -14,7 +14,7 @@ export default function App() {
 
   async function getCandles() {
     // call the api
-    const response = await fetch("http://localhost:8080/candles");
+    const response = await fetch("https://candles-tvrj.onrender.com/candles");
     // get the data from the response
     const data = await response.json();
     // update our state with that new data
@@ -33,7 +33,7 @@ export default function App() {
     console.log("Form is submitted");
     console.log(form);
     // make a POST fetch request to our server
-    await fetch("http://localhost:8080/candles", {
+    await fetch("https://candles-tvrj.onrender.com/candles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
